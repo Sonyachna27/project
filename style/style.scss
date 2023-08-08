@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'TT Hoves'; /* Назва шрифту, яку ви будете використовувати */
+    src: url('../fonts/TT-Hoves-Pro-Trial-3-000/TT\ Hoves\ Pro\ Trial\ 3-000/.woff2') format('woff'); 
+    src: url('../fonts/TT-Hoves-Pro-Trial-3-000/TT\ Hoves\ Pro\ Trial\ 3-000/.woff2') format('woff2'), 
+    
+  }
+  @font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SFPro/SFProDisplay-Medium.woff2');
+    src: url('../fonts/SFPro/SFProDisplay-Medium.woff');
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "TT Hoves", sans-serif;
+    font-weight: 600;
+    
+    a{
+        text-decoration: none;
+        color: inherit;
+        width: fit-content;
+        cursor: pointer;
+    }
+}
+    
+.container{
+    max-width: 1200px;
+    width: 100%;
+    
+    padding: 0 15px;
+    margin: 0 auto;
+}
+h2{
+    font-size: 64px;
+    color:  #BDBDBD;
+    padding: 0;
+}
+button{
+    border: none;
+    background: inherit;
+    cursor: pointer;
+}
+main{
+    margin-top: 60px;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: TT Hoves;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    width: 222px;
+    height: 71px;
+    svg{
+        width: 24px;
+        height: 24px;
+        margin-left: 12px;
+    }
+}
+.btn:hover{
+    transform: translateY(-10px);
+    transition: 0.75s ease;
+    background: #caa6a6;
+}
+@import './_navBar.scss' ;
+@import './_topSection.scss';
+@import './inform';
+@import './contact';
+@import './footer';
+@import './mobileStyle';

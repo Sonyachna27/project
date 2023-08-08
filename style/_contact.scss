@@ -1,0 +1,139 @@
+.contact{
+    margin-bottom: 120px;
+}
+.contact-wrap{
+    display: flex;
+    flex-direction: column;
+   
+    h2{
+        margin-bottom: 22px;
+    }
+}
+.contact__form{
+    display: flex;
+    gap: 15px;
+}
+.form {
+  font-family: 'TT Hoves', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.56px;
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  p{
+    color: #333;
+    margin-left: 35px;
+  }
+}
+
+
+.form input[type="text"],
+.form input[type="tel"],
+.form input[type="email"],
+.form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #F3F3F3;
+  color: #8D8D8D;
+}
+.form input[type="text"],
+.form input[type="tel"],
+.form input[type="email"]{
+    height: 45px;
+}
+#message {
+    height: 147px;
+    position: relative;
+  }
+  
+  .message-group {
+    position: relative;
+  }
+  
+  .done-icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    z-index: 50;
+  }
+.form label{
+    color: #8D8D8D;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.56px;
+}
+.form label span {
+  color: #C30000;
+}
+    
+.btn-wrapper {
+    display: flex;
+    align-items: center;
+    max-width: 222px;
+    gap: 10px;
+    background-color: #333333; 
+    color: #ffffff; 
+    max-width: 222px;
+    padding: 30px 49px 29px 48px;
+    cursor: pointer;
+    svg path{
+        fill: #ffffff; 
+        margin-left: 10px; 
+      }
+  }
+  .btn-wrapper:hover{
+    transform: translateY(-10px);
+    transition: 0.75s ease;
+    background: #caa6a6;
+  }
+  .submit-btn {
+    border: none;
+    font-size: 16px;
+    background: inherit;
+    color: inherit;
+  }
+  
+
+.form-group {
+    position: relative;
+  }
+  
+  .form-group input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-group label {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    pointer-events: none; /* Вимкнення реагування на кліки */
+    transition: 0.2s ease-out; /* Плавний перехід для зникаючого тексту */
+  }
+  
+  .form-group input:focus + label,
+  .form-group input:not(:placeholder-shown) + label {
+    top: -20px;
+    font-size: 14px;
+    color: #C30000;
+    background-color: #fff;
+    padding: 0 5px;
+  }
+  .contact__img-wrap{
+    max-width: 749px;
+  }
+.contact__img{
+   width: 100%;
+}
