@@ -108,22 +108,28 @@
     padding: 0;
     object-fit: cover;
     width: 100%;
+    
 }
 
 .project__img1{
     grid-area: b;
+    position: relative;
 }
 .project__img2 {
     grid-area: c;
+    position: relative;
 }
 .project__img3{
     grid-area: d;
+    position: relative;
 }
 .project__img4{
     grid-area: e;
+    position: relative;
 }
 .project__img5{
     grid-area: a;
+    position: relative;
 }
 .project-btn{
     background: #333;
@@ -135,10 +141,9 @@
             fill: #FFF;
         }
 }
-.img__link{
-    
+.img__link{ 
     padding: 42px 78px 43px 79px;
-    display: none;
+    // display: none;
     align-items: start;
     justify-content: center;
     flex-direction: column;
@@ -148,15 +153,12 @@
     position: absolute;
     top:0;
     left: 0;
-    opacity: 0.8;
+    display: flex;
     background: #333;
     z-index: 1;
+    opacity: 0;
     transition: opacity .5s;
-    h2{
-        margin-bottom: 14px;
-        font-size: 60px;
-        font-weight: 700;
-    }
+   
     span{
         font-family: "Gothic A1";
     }
@@ -166,6 +168,10 @@
     color: #FFF;
     max-width: 413px;
     z-index: 2;
+        margin-bottom: 14px;
+        font-size: 60px;
+        font-weight: 700;
+    
 }
 .img-text{
     display: flex;
@@ -185,22 +191,22 @@
     position: relative;
 }
 .project__img1:hover > .img__link{
-    display: flex;
+    opacity: 0.8;
 }
 .project__img5:hover > .img__link{
-    display: flex;
+    opacity: 0.8;
 }
 .project__img2:hover > .img__link{
-    display: flex;
-    padding: 25px 14px 28px 14px;
+    opacity: 0.8;
+    // padding: 25px 14px 28px 14px;
     h2{
         margin-bottom: 14px;
         font-size: 25px;
     }
 }
 .project__img3:hover > .img__link {
-    display: flex;
-    padding: 25px 33px 28px 50px;
+    opacity: 0.8;
+    // padding: 25px 33px 28px 50px;
 
     h2{
         margin-bottom: 14px;
@@ -208,7 +214,7 @@
     }
 }
 .project__img4:hover > .img__link{
-    display: flex;
+    opacity: 0.8;
     padding: 25px 58px 28px 57px;
     h2{
         margin-bottom: 14px;
