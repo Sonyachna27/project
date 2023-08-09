@@ -308,6 +308,19 @@
     .task__wrap p {
         max-width: 270px;
     }
+    .img-title{
+        font-size: 30px;
+        text-align: center;
+    }
+    @media (hover: none){
+        .img__link{
+            opacity: 0.8;
+            align-items: center;
+        }
+       
+
+    }
+
 }
 @media screen and (max-width:870px) {
     main{
@@ -346,14 +359,12 @@
             "e";
 
     }
-    .img__link {
-        padding: 36px 39px 36px 29px;
-        h2{
-            font-size: 40px;
-             margin-bottom: 25px;
-        }
+    .project-btn {
+        padding: 23px 15px 30px 21px;
     }
-
+// .contact-wrap h2{
+//     text-align: start;
+// }
     .btn{
         max-width: 182px;
     }
@@ -366,8 +377,6 @@
         font-size: 14px;
     }
     .slide__title {
-        // padding-top: 109px;
-        // padding-bottom: 245px;
         h1{
             font-size: 30px;
             line-height: 0;
@@ -425,3 +434,4 @@
         font-size: 36px;
     }
 }
+

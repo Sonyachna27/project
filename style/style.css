@@ -415,22 +415,27 @@ header {
 
 .project__img1 {
   grid-area: b;
+  position: relative;
 }
 
 .project__img2 {
   grid-area: c;
+  position: relative;
 }
 
 .project__img3 {
   grid-area: d;
+  position: relative;
 }
 
 .project__img4 {
   grid-area: e;
+  position: relative;
 }
 
 .project__img5 {
   grid-area: a;
+  position: relative;
 }
 
 .project-btn {
@@ -446,7 +451,6 @@ header {
 
 .img__link {
   padding: 42px 78px 43px 79px;
-  display: none;
   align-items: start;
   justify-content: center;
   flex-direction: column;
@@ -456,15 +460,11 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.8;
+  display: flex;
   background: #333;
   z-index: 1;
+  opacity: 0;
   transition: opacity 0.5s;
-}
-.img__link h2 {
-  margin-bottom: 14px;
-  font-size: 60px;
-  font-weight: 700;
 }
 .img__link span {
   font-family: "Gothic A1";
@@ -474,6 +474,9 @@ header {
   color: #FFF;
   max-width: 413px;
   z-index: 2;
+  margin-bottom: 14px;
+  font-size: 60px;
+  font-weight: 700;
 }
 
 .img-text {
@@ -495,16 +498,15 @@ header {
 }
 
 .project__img1:hover > .img__link {
-  display: flex;
+  opacity: 0.8;
 }
 
 .project__img5:hover > .img__link {
-  display: flex;
+  opacity: 0.8;
 }
 
 .project__img2:hover > .img__link {
-  display: flex;
-  padding: 25px 14px 28px 14px;
+  opacity: 0.8;
 }
 .project__img2:hover > .img__link h2 {
   margin-bottom: 14px;
@@ -512,8 +514,7 @@ header {
 }
 
 .project__img3:hover > .img__link {
-  display: flex;
-  padding: 25px 33px 28px 50px;
+  opacity: 0.8;
 }
 .project__img3:hover > .img__link h2 {
   margin-bottom: 14px;
@@ -521,7 +522,7 @@ header {
 }
 
 .project__img4:hover > .img__link {
-  display: flex;
+  opacity: 0.8;
   padding: 25px 58px 28px 57px;
 }
 .project__img4:hover > .img__link h2 {
@@ -596,7 +597,7 @@ header {
   transform: translateY(-50%);
   width: 24px;
   height: 24px;
-  z-index: 50;
+  z-index: 1;
 }
 
 .form label {
@@ -1075,6 +1076,16 @@ footer:after {
   .task__wrap p {
     max-width: 270px;
   }
+  .img-title {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 960px) and (hover: none) {
+  .img__link {
+    opacity: 0.8;
+    align-items: center;
+  }
 }
 @media screen and (max-width: 870px) {
   main {
@@ -1105,12 +1116,8 @@ footer:after {
     text-align: center;
     grid-template-areas: "a" "b" "d" "c" "e";
   }
-  .img__link {
-    padding: 36px 39px 36px 29px;
-  }
-  .img__link h2 {
-    font-size: 40px;
-    margin-bottom: 25px;
+  .project-btn {
+    padding: 23px 15px 30px 21px;
   }
   .btn {
     max-width: 182px;
