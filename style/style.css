@@ -94,11 +94,8 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-}
-
-.scroll-style {
   background: #fff;
-  z-index: 2;
+  z-index: 3;
 }
 
 .header_mobil {
@@ -186,6 +183,7 @@ header {
 
 .swiper {
   position: relative;
+  z-index: 0;
 }
 
 .slide {
@@ -831,6 +829,9 @@ footer:after {
   .slide::after {
     top: 66%;
   }
+  .slide__img {
+    position: relative;
+  }
   .swiper-btns {
     bottom: 100px;
   }
@@ -890,8 +891,9 @@ footer:after {
     left: 7%;
   }
   .slide__title {
+    position: relative;
     padding-top: 336px;
-    z-index: 5;
+    z-index: 1;
     padding-bottom: 368px;
     margin: 0 auto;
   }
@@ -1004,10 +1006,11 @@ footer:after {
     gap: 10px;
     justify-content: center;
     align-items: center;
-    z-index: 5;
+    z-index: 3;
   }
   .header__wrap .nav-Bar {
     flex-direction: column;
+    z-index: 3;
   }
   .active .header__wrap {
     transform: translateX(0);
@@ -1017,11 +1020,15 @@ footer:after {
     display: flex;
     flex-direction: column;
     height: 100%;
+    justify-content: flex-start;
   }
   .active .header__wrap > .nav-Bar a {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .active .header__wrap > .logoLink {
+    margin-bottom: 20px;
   }
   .active #bar2 {
     display: none;
@@ -1047,7 +1054,7 @@ footer:after {
     padding: 10px;
     justify-content: space-between;
     align-items: center;
-    z-index: 5;
+    z-index: 50;
   }
   .mobil_social {
     display: flex;

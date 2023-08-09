@@ -20,13 +20,13 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-const headerElements = document.querySelectorAll('.header');
-        function handleScroll(event) {
-            headerElements.forEach(element => {
-                element.classList.toggle('scroll-style' , window.scrollY > 0);
-            });
-        }
-        window.addEventListener('scroll', handleScroll);
+// const headerElements = document.querySelectorAll('.header');
+//         function handleScroll(event) {
+//             headerElements.forEach(element => {
+//                 element.classList.toggle('scroll-style' , window.scrollY > 0);
+//             });
+//         }
+//         window.addEventListener('scroll', handleScroll);
 
 const menuBtn = document.querySelector('.active-btn');
 menuBtn.addEventListener('click', () => document.body.classList.toggle('active'));
