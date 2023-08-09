@@ -121,9 +121,9 @@
     }
     .slide__title {
         position: relative;
-        padding-top: 336px;
+        padding-top: 50%;
         z-index: 1;
-        padding-bottom: 368px;
+        padding-bottom: 50%;
         margin: 0 auto;
         h1{
             color:#333;
@@ -293,7 +293,7 @@
         display: flex;
         gap: 10px;
         align-items: center;
-        justify-content: center;
+        justify-content: end;
         width: 100%;
         max-width: 280px;
         img{
@@ -366,8 +366,8 @@
         font-size: 14px;
     }
     .slide__title {
-        padding-top: 109px;
-        padding-bottom: 245px;
+        // padding-top: 109px;
+        // padding-bottom: 245px;
         h1{
             font-size: 30px;
             line-height: 0;
@@ -418,5 +418,10 @@
    
     .foo__social-item{
         text-align: center;
+    }
+}
+@media  screen and (max-width:370px) {
+    h2{
+        font-size: 36px;
     }
 }
