@@ -1,14 +1,14 @@
 .information{
     margin-bottom: 221px;
 }
-.information__wrapper{
+.information__wrapper {
     display: flex;
+    padding: 30px 70px 30px 30px;
     gap: 30px;
     background: #FBFBFB;
     padding-top: 30px;
-    padding-bottom:  30px;
+    padding-bottom: 30px;
     position: relative;
-    justify-content: flex-end;
     margin-bottom: 150px;
 }
 .info__img-wrap{
@@ -27,7 +27,7 @@
   
 }
 
-.info__text-wrap{
+.info__text-wrap {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -45,6 +45,7 @@
 }
 .read{
     background: #FFF;
+    padding: 30px 64px;
 }
 .tasks{
     display: flex;
@@ -57,20 +58,23 @@
 .task__wrap{
     display: flex;
     justify-content: space-between;
-     p{
-        color: #333;
-        font-size: 22px;
-        font-weight: 400;
-        line-height: 36px; 
-        max-width: 420px;
-        &:nth-child(1){
-            max-width: 279px;
-        }
-     }
+     
 }
 .task{
     display: flex;
     gap: 30px;
+    align-items: center;
+    max-width: 570px;
+}
+.task-paragraph{
+    color: #333;
+    font-size: 22px;
+    max-width: 420px;
+    font-weight: 400;
+    line-height: 36px;
+ }
+ .min{
+    max-width: 279px;
 }
 .count{
     color: #F2F2F2;
@@ -80,6 +84,9 @@
     font-weight: 900;
     line-height: normal;
 }
+
+//блок з картинками//
+
 .project{
   position: relative;
   h2{
@@ -91,81 +98,70 @@
   display: grid;
   grid-template-areas: 
   "a a a b b b"
-   "c c d d e e";
+"c d d d d e";
   gap: 30px;
+    margin-bottom: 30px;
 }
 
-
-.project__img1,
-.project__img2,
-.project__img3,
-.project__img4,
-.project__img5{
-    max-width: 570px;
-    &img{
-        max-width: 570px;
-    }
+.project-img{
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    width: 100%;
 }
 
 .project__img1{
-    // order: 1;
     grid-area: b;
 }
 .project__img2 {
-    // order: 1;
     grid-area: c;
 }
 .project__img3{
-    // order: 1;
-    max-width: 570px;
     grid-area: d;
 }
 .project__img4{
-    // order: 2;
     grid-area: e;
 }
-// .project__img5{
-//     order: 2;
-// }
+.project__img5{
+    grid-area: a;
+}
 .project-btn{
     background: #333;
     position: absolute;
     right: 0;
-    // bottom: -101px;
+    padding: 30px 40px 30px 29px;
     color: #FFF;
         svg path{
             fill: #FFF;
         }
 }
 .img__link{
-    grid-area: a;
+    
     padding: 42px 78px 43px 79px;
-    max-width: 570px;
-    display: flex;
+    display: none;
     align-items: start;
     justify-content: center;
-    background: url(../images/project_img1.png) center center / cover;
     flex-direction: column;
     color: #FFF;
-    position: relative;
-    order: 1;
-    h2{
-        margin-bottom: 14px;
-        font-size: 60px;
-    }
-}
-.img__link::after{
-    content: '';
     width: 100%;
     height: 100%;
     position: absolute;
     top:0;
     left: 0;
     opacity: 0.8;
-background: #333;
-z-index: 1;
-
+    background: #333;
+    z-index: 1;
+    transition: opacity .5s;
+    h2{
+        margin-bottom: 14px;
+        font-size: 60px;
+        font-weight: 700;
+    }
+    span{
+        font-family: "Gothic A1";
+    }
 }
+
 .img-title{
     color: #FFF;
     max-width: 413px;
@@ -179,12 +175,43 @@ z-index: 1;
         margin-left: 12px;
     }
 }
-.img__link:hover,
+
 .project__img1:hover,
 .project__img2:hover,
 .project__img3:hover,
 .project__img4:hover,
 .project__img5:hover{
-    transform: translateY(-10px);
     transition: 0.75s ease;
+    position: relative;
+}
+.project__img1:hover > .img__link{
+    display: flex;
+}
+.project__img5:hover > .img__link{
+    display: flex;
+}
+.project__img2:hover > .img__link{
+    display: flex;
+    padding: 25px 14px 28px 14px;
+    h2{
+        margin-bottom: 14px;
+        font-size: 25px;
+    }
+}
+.project__img3:hover > .img__link {
+    display: flex;
+    padding: 25px 33px 28px 50px;
+
+    h2{
+        margin-bottom: 14px;
+        font-size: 40px;
+    }
+}
+.project__img4:hover > .img__link{
+    display: flex;
+    padding: 25px 58px 28px 57px;
+    h2{
+        margin-bottom: 14px;
+        font-size: 28px;
+    }
 }

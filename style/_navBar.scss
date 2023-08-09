@@ -1,5 +1,5 @@
 header{
-    padding: 15px 0;
+    padding: 29px 0 30px 0;
     margin: 0 auto;
     position: fixed;
     top: 0;
@@ -13,6 +13,7 @@ header{
 .header_mobil{
     display: none;
     width: 50px;
+    z-index: 5;
 }
 .header__wrap{
     display: flex;

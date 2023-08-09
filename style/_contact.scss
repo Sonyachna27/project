@@ -28,6 +28,8 @@
   p{
     color: #333;
     margin-left: 35px;
+    letter-spacing: 0.42px;
+    margin-bottom: 11px;
   }
 }
 
@@ -38,24 +40,28 @@
 .form textarea {
   display: block;
   width: 100%;
-  padding: 10px;
+  // padding: 10px;
   border: none;
   background-color: #F3F3F3;
   color: #8D8D8D;
+  padding-top: 15px;
+    padding-bottom: 14px;
 }
-.form input[type="text"],
-.form input[type="tel"],
-.form input[type="email"]{
-    height: 45px;
-}
+// .form input[type="text"],
+// .form input[type="tel"],
+// .form input[type="email"]{
+//     height: 45px;
+// }
 #message {
     height: 147px;
     position: relative;
+    margin-bottom: 12px;
   }
   
   .message-group {
     position: relative;
   }
+ 
   
   .done-icon {
     position: absolute;
@@ -71,58 +77,29 @@
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.56px;
+    text-align: center;
 }
 .form label span {
   color: #C30000;
 }
-    
-.btn-wrapper {
-    display: flex;
-    align-items: center;
-    max-width: 222px;
-    gap: 10px;
-    background-color: #333333; 
-    color: #ffffff; 
-    max-width: 222px;
-    padding: 30px 49px 29px 48px;
-    cursor: pointer;
-    svg path{
-        fill: #ffffff; 
-        margin-left: 10px; 
-      }
-  }
-  .btn-wrapper:hover{
-    transform: translateY(-10px);
-    transition: 0.75s ease;
-    background: #caa6a6;
-  }
-  .submit-btn {
-    border: none;
-    font-size: 16px;
-    background: inherit;
-    color: inherit;
-  }
-  
 
 .form-group {
     position: relative;
   }
   
   .form-group input {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 14px;
+    outline: none;
   }
   
   .form-group label {
     position: absolute;
-    top: 10px;
-    left: 15px;
-    pointer-events: none; /* Вимкнення реагування на кліки */
-    transition: 0.2s ease-out; /* Плавний перехід для зникаючого тексту */
+    top: 14px;
+    left: 21px;
+    pointer-events: none;
+    transition: 0.2s ease-out;
   }
-  
   .form-group input:focus + label,
   .form-group input:not(:placeholder-shown) + label {
     top: -20px;
@@ -136,4 +113,48 @@
   }
 .contact__img{
    width: 100%;
+}
+.btn-wrapper {
+  display: flex;
+  align-items: center;
+  max-width: 222px;
+  background-color: #333333; 
+  color: #ffffff; 
+  max-width: 222px;
+  padding: 24px 49px 23px 48px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px; /* 100% */
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  svg {
+    margin-left: 10px; 
+    width: 24px;
+    height: 24px;
+    path{
+      fill: #ffffff; 
+     
+    }
+  }
+  input{
+    font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px; 
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  }
+}
+.btn-wrapper:hover{
+  transform: translateY(-10px);
+  transition: 0.75s ease;
+  background: #caa6a6;
+}
+.submit-btn {
+  border: none;
+  font-size: 16px;
+  background: inherit;
+  color: inherit;
 }

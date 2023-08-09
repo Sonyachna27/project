@@ -1,7 +1,13 @@
 @font-face {
-    font-family: 'TT Hoves'; /* Назва шрифту, яку ви будете використовувати */
-    src: url('../fonts/TT-Hoves-Pro-Trial-3-000/TT\ Hoves\ Pro\ Trial\ 3-000/.woff2') format('woff'); 
-    src: url('../fonts/TT-Hoves-Pro-Trial-3-000/TT\ Hoves\ Pro\ Trial\ 3-000/.woff2') format('woff2'), 
+    font-family: 'TT Hoves'; 
+    src: url('../fonts/font/TTHoves-Light.woff') format('woff'); 
+    src: url('../fonts/font/TTHoves-Light.woff2') format('woff2'), 
+    
+  }
+@font-face {
+    font-family: 'Gothic A1'; 
+    src: url('../fonts/Gothic_A1/GothicA1-Regular.ttf'); 
+    // src: url('../fonts/font/TTHoves-Light.woff2') , 
     
   }
   @font-face {
@@ -9,7 +15,6 @@
     src: url('../fonts/SFPro/SFProDisplay-Medium.woff2');
     src: url('../fonts/SFPro/SFProDisplay-Medium.woff');
   }
-
   html {
     scroll-behavior: smooth;
   }
@@ -20,13 +25,14 @@
 }
 body{
     font-family: "TT Hoves", sans-serif;
-    font-weight: 600;
-    
+    font-weight: 400;
+    font-style: normal;
     a{
         text-decoration: none;
         color: inherit;
         width: fit-content;
         cursor: pointer;
+        font-family: inherit;
     }
 }
     
@@ -41,6 +47,7 @@ h2{
     font-size: 64px;
     color:  #BDBDBD;
     padding: 0;
+    font-weight: 300;
 }
 button{
     border: none;
@@ -48,7 +55,7 @@ button{
     cursor: pointer;
 }
 main{
-    margin-top: 60px;
+    margin-top: 102px;
 }
 .btn{
     display: flex;
@@ -61,7 +68,8 @@ main{
     line-height: 100%;
     letter-spacing: 2.4px;
     text-transform: uppercase;
-    width: 222px;
+    max-width: 222px;
+    padding: 30px 50px;
     height: 71px;
     svg{
         width: 24px;
