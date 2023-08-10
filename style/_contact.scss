@@ -4,14 +4,16 @@
 .contact-wrap{
     display: flex;
     flex-direction: column;
-   
     h2{
-        margin-bottom: 22px;
-    }
+      margin-bottom: 22px;
+      
+  }
+    
 }
 .contact__form{
     display: flex;
     gap: 15px;
+    justify-content: center;
 }
 .form {
   font-family: 'TT Hoves', sans-serif;
@@ -47,11 +49,6 @@
   padding-top: 15px;
     padding-bottom: 14px;
 }
-// .form input[type="text"],
-// .form input[type="tel"],
-// .form input[type="email"]{
-//     height: 45px;
-// }
 #message {
     height: 147px;
     position: relative;
@@ -157,4 +154,11 @@
   font-size: 16px;
   background: inherit;
   color: inherit;
+}
+.form-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+ 
 }
