@@ -187,10 +187,12 @@
     .contact-wrap h2{
         display: flex;
         flex-direction: column;
+        margin-left: -50px;
     }
     .contact__img-wrap {
         display: none;
     }
+   
 }
 @media screen and (max-width:960px){
     #menu-bar{
@@ -320,7 +322,7 @@
        
 
     }
-
+ 
 }
 @media screen and (max-width:870px) {
     main{
@@ -362,9 +364,9 @@
     .project-btn {
         padding: 23px 15px 30px 21px;
     }
-// .contact-wrap h2{
-//     text-align: start;
-// }
+.contact-wrap h2{
+    margin-left: -50px;
+}
     .btn{
         max-width: 182px;
     }
@@ -428,8 +430,24 @@
     .foo__social-item{
         text-align: center;
     }
+    .information {
+        margin-bottom: 110px;
+    }
+    .contact {
+        margin-bottom: 60px;
+    }
+    .info__img-wrap {
+        margin-bottom: 0px;
+    }
+}
+@media screen and (max-width:470px) {
+    .contact-wrap h2{
+        margin-left: -35px;
+    }
+
 }
 @media  screen and (max-width:370px) {
+    
     h2{
         font-size: 36px;
     }
