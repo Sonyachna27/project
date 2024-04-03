@@ -1,102 +1,113 @@
 .contact{
     margin-bottom: 120px;
-}
-.contact-wrap{
-    display: flex;
-    flex-direction: column;
-    h2{
-      margin-bottom: 22px;
-      
-  }
-    
-}
-.contact__form{
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-}
-.form {
-  font-family: 'TT Hoves', sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 0.56px;
-  max-width: 400px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  p{
-    color: #333;
-    margin-left: 35px;
-    letter-spacing: 0.42px;
-    margin-bottom: 11px;
-  }
+    &__container{
+      & h2{
+        margin-bottom: 22px;
+    }
+    &-wrap{
+      display: flex;
+      gap: 30px;
+      @media screen and (max-width:1023px) {
+        flex-direction: column;
+      }
+      &-image{
+        display: block;
+        width: 63%;
+        max-height: 369px;
+        @media screen and (max-width:1023px) {
+          width: 100%;
+        }
+      }
+      &-form{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-family: 'TT Hoves', sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.56px;
+        width: 34%;
+        @media screen and (max-width:1023px) {
+          width: 100%;
+        }
+        &  p{
+              color: #333;
+              margin-left: 35px;
+              letter-spacing: 0.42px;
+              margin-bottom: 11px;
+            }
+        & input:not([type='submit']),
+        & textarea{
+          display: block;
+          width: 100%;
+          border: none;
+          background-color: #F3F3F3;
+          color: #8D8D8D;
+          padding-top: 15px;
+            padding-bottom: 14px;
+            outline: none;
+        }
+        & textarea{
+          min-height: 147px;
+          position: relative;
+          margin-bottom: 12px;
+          
+        }
+       
+        & .form-group{
+          position: relative;
+          & input{
+            padding-left: 10px;
+            font-size: 14px;
+            outline: none;
+          }
+          & label{
+            position: absolute;
+            top: 14px;
+            left: 26px;
+            pointer-events: none;
+            transition: 0.2s ease-out;
+            color: #8D8D8D;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.56px;
+            text-align: center;
+            & span {
+              color: #C30000;
+            }
+          }
+
+        }
+        &  .message-group {
+          position: relative;
+          min-height: 147px;
+          & input{
+            height: 100%;
+          }
+        }
+        & .done-icon {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 24px;
+          height: 24px;
+          z-index: 1;
+        }
+      }
+    }
+    }
 }
 
-
-.form input[type="text"],
-.form input[type="tel"],
-.form input[type="email"],
-.form textarea {
-  display: block;
-  width: 100%;
-  // padding: 10px;
-  border: none;
-  background-color: #F3F3F3;
-  color: #8D8D8D;
-  padding-top: 15px;
-    padding-bottom: 14px;
-}
-#message {
-    height: 147px;
-    position: relative;
-    margin-bottom: 12px;
-  }
   
-  .message-group {
-    position: relative;
-  }
+ 
  
   
-  .done-icon {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 24px;
-    height: 24px;
-    z-index: 1;
-  }
-.form label{
-    color: #8D8D8D;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 0.56px;
-    text-align: center;
-}
-.form label span {
-  color: #C30000;
-}
+  
 
-.form-group {
-    position: relative;
-  }
-  
-  .form-group input {
-    padding-left: 10px;
-    font-size: 14px;
-    outline: none;
-  }
-  
-  .form-group label {
-    position: absolute;
-    top: 14px;
-    left: 21px;
-    pointer-events: none;
-    transition: 0.2s ease-out;
-  }
+
   .form-group input:focus + label,
   .form-group input:not(:placeholder-shown) + label {
     top: -20px;

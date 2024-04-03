@@ -1,23 +1,45 @@
 @font-face {
     font-family: 'TT Hoves'; 
-    src: url('../fonts/font/TTHoves-Light.woff') format('woff'); 
-    src: url('../fonts/font/TTHoves-Light.woff2') format('woff2'), 
-    
+    src: url(../fonts/font/TTHoves-Light.ttf);
+    font-weight: 300;
+  }
+@font-face {
+    font-family: 'TT Hoves'; 
+    src: url(../fonts/font/TTHoves-Regular.ttf);
+    font-weight: 400;
+  }
+@font-face {
+    font-family: 'TT Hoves'; 
+    src: url(../fonts/font/TTHoves-Medium.ttf);
+    font-weight: 500;
+  }
+@font-face {
+    font-family: 'TT Hoves'; 
+    src: url(../fonts/font/TTHoves-Bold.ttf);
+    font-weight: 700;
   }
 @font-face {
     font-family: 'Gothic A1'; 
-    src: url('../fonts/Gothic_A1/GothicA1-Regular.ttf'); 
-    // src: url('../fonts/font/TTHoves-Light.woff2') , 
-    
+    src: url('../fonts/Gothic_A1/GothicA1-Regular.ttf');  
+    font-weight: 400;
   }
   @font-face {
     font-family: 'SF Pro Display';
-    src: url('../fonts/SFPro/SFProDisplay-Medium.woff2');
-    src: url('../fonts/SFPro/SFProDisplay-Medium.woff');
+    src: url('../fonts/SFPro/SFProDisplay-Heavy.ttf');
+    font-weight: 900;
   }
   html {
     scroll-behavior: smooth;
   }
+  @import './reset';
+  @import './_navBar.scss' ;
+@import './_topSection.scss';
+@import './inform';
+@import './contact';
+@import './footer';
+@import './mobileStyle';
+  @import './tasks-section.scss';
+  @import './projects-section.scss';
 *{
     margin: 0;
     padding: 0;
@@ -35,11 +57,14 @@ body{
         font-family: inherit;
     }
 }
-    
+ main{
+    @media screen and (max-width:1023px) {
+        margin-top: 200px;
+    }
+ }   
 .container{
     max-width: 1200px;
     width: 100%;
-    
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -48,14 +73,14 @@ h2{
     color:  #BDBDBD;
     padding: 0;
     font-weight: 300;
+    @media screen and (max-width:550px) {
+        font-size: 48px;
+    }
 }
 button{
     border: none;
     background: inherit;
     cursor: pointer;
-}
-main{
-    margin-top: 102px;
 }
 .btn{
     display: flex;
@@ -82,9 +107,3 @@ main{
     transition: 0.75s ease;
     background: #caa6a6;
 }
-@import './_navBar.scss' ;
-@import './_topSection.scss';
-@import './inform';
-@import './contact';
-@import './footer';
-@import './mobileStyle';

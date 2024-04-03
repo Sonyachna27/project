@@ -1,3 +1,8 @@
+document.addEventListener("DOMContentLoaded", function() {
+  const burgerMenu = document.querySelector('.burgerBtn');
+  const content = document.querySelector('navWrap');
+  const htmlElement = document.querySelector('html');
+  burgerMenu.addEventListener('click' , () => htmlElement.classList.toggle('open'));
 var swiper = new Swiper(".mySwiper", {
   pagination: {
     el: ".swiper-pagination",
@@ -15,18 +20,11 @@ var swiper = new Swiper(".mySwiper", {
     },},
   
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".next",
+    prevEl: ".prev",
   },
 });
 
-// const headerElements = document.querySelectorAll('.header');
-//         function handleScroll(event) {
-//             headerElements.forEach(element => {
-//                 element.classList.toggle('scroll-style' , window.scrollY > 0);
-//             });
-//         }
-//         window.addEventListener('scroll', handleScroll);
 
 const menuBtn = document.querySelector('.active-btn');
 menuBtn.addEventListener('click', () => document.body.classList.toggle('active'));
@@ -66,4 +64,23 @@ messageInput.addEventListener('blur', () => {
   if (!messageInput.value.trim()) {
     doneIcon.style.display = 'block'; 
   }
+});
+document.querySelectorAll('a[href^="#"').forEach(link => {
+
+  link.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      let href = this.getAttribute('href').substring(1);
+
+      const scrollTarget = document.getElementById(href);
+
+      const topOffset = document.querySelector('header').offsetHeight;
+      const elementPosition = scrollTarget.getBoundingClientRect().top;
+      const offsetPosition = elementPosition - topOffset;
+      window.scrollBy({
+          top: offsetPosition,
+          behavior: 'smooth'
+      });
+  });
+});
 });
