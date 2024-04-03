@@ -79,6 +79,17 @@
                     gap: 40px;
                     display: flex;
                     flex-wrap: wrap;
+                    & a{
+                        transition: .3s linear;
+                        &:hover{
+                            & svg path{
+                                fill: #caa6a6;
+                            }
+                        }
+                        & svg{
+                            transition: .3s linear;
+                        }
+                    }
                 }
             }
         }

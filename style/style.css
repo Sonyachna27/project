@@ -708,6 +708,15 @@ button {
   display: flex;
   flex-wrap: wrap;
 }
+.footer__container-top-item-social a {
+  transition: 0.3s linear;
+}
+.footer__container-top-item-social a:hover svg path {
+  fill: #caa6a6;
+}
+.footer__container-top-item-social a svg {
+  transition: 0.3s linear;
+}
 .footer__container-copy {
   padding: 24px 0;
   text-align: center;
