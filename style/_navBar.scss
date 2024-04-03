@@ -1,92 +1,194 @@
-header{
-    padding: 29px 0 30px 0;
-    margin: 0 auto;
+.header{
+    padding: 29px 0 ;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    height: auto;
     background: #fff;
-    z-index: 3;
-}
-// .scroll-style{
     
-// }
-.header_mobil{
-    display: none;
-    width: 50px;
-    z-index: 5;
-}
-.header__wrap{
-    display: flex;
-    align-items: center;
-    gap: 330px;
-    // max-height: 71px;
-}
-
-
-.logoLink{
-    display: flex;
-    align-items: center;
-    width: 68.552px;
-    height: 41.527px;
-    padding: 0;
-    img {
-        width: 100%;
-        padding: 0;
-    }
    
-}
-.nav-Bar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 557px;
-    gap: 60px;
-    width: 100%;
-}
-.nav-link{
-    color:  #333;
-    font-family: TT Hoves;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%; 
-    letter-spacing: 2.4px;
-    text-transform: uppercase;
-    position: relative;
-    width: 100%;
-
-        &:hover{
-            transition: .75s ease; 
-        }
-        &:after{
-            content: "";
-            position: absolute;
-            top: -3px;
-            left: 0; 
-            width: 0;
-            height: 1px;
-            background:#333;
-        }
-        &:hover::after{
-            transition: ease-in-out .75s;
+    z-index: 50;
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 100%;
+        width: 100%;
+        
+        & .logo{
+            max-width: 70px;
+            max-height: 70px;
             width: 100%;
-            height: 1px;
-            transform: scale(1.3); 
+            height: 100%;
         }
-        &:before{
-                content: "";
-                position: absolute;
-                bottom: -3px;
+        & .navWrap{
+            @media  screen and (max-width:1023px) {
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                height: 100vh;
+                position: fixed;
+                top: -100%;
                 left: 0;
-                width: 0;
-                height: 1px;
-            }
-        &:hover::before{
-            transition: ease-in-out .75s;
-            width: 100%;
-            height: 1px;
-            transform: scale(1.3);
-            background: #333;
+                transform: scale(0);
+                background-color: #fff;
+                transition: all .5s ease;
+                z-index: 50;
+                padding: 0 20px;
+                .open & {
+                    top: 82px;
+                    transform: scale(1);
+                    align-items: flex-start;
+                    gap: 30px;
+                }
         }
+            width: 64%;
+            & ul{
+                display: flex;
+                align-items: center;
+                gap: 60px;
+                @media screen and (max-width:1023px) {
+                    flex-direction: column;
+                    
+                }
+                & li{
+                    color:  #333;
+                    font-family: 'TT Hoves';
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 100%; 
+                    letter-spacing: 2.4px;
+                    text-transform: uppercase;
+                    position: relative;
+                    transition: .75s ease;
+                       
+                        &:after,
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            top: -3px;
+                            left: 0; 
+                            width: 0;
+                            height: 1px;
+                            background:#333;
+                            transition: .75s ease;
+                        }
+                        &:before{
+                            bottom: -3px;
+                            top: inherit;
+                        }
+                        &:hover::after{
+                            width: 100%;
+                            transform: scale(1.3); 
+                        }
+                        &:hover::before{
+                            width: 100%;
+                            transform: scale(1.3);
+                            background: #333;
+                        }
+                }
+            }
+
+        }
+        .burgerBtn {
+            display: none;
+          
+            @media screen and (max-width: 1023px) {
+              display: block;
+              width: 45px;
+              height: 45px;
+              border: 1px solid #ccc;
+              background-color: #fff;
+              cursor: pointer;
+              position: relative;
+              border-radius: 50%;
+              
+          
+              .btn-menu-line {
+                width: 27px;
+                height: 2px;
+                position: absolute;
+                left: 8px;
+                background-color:#ccc;
+                transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+              }
+          
+              .btn-menu-line1 {
+                top: 17px;
+              }
+          
+              .btn-menu-line3 {
+                bottom: 15px;
+              }
+          
+               .open &{
+                .btn-menu-line1 {
+                  transform: rotate(45deg) translate(2px, 2px) scale(1.15) rotate(92deg);
+                }
+          
+                .btn-menu-line2 {
+                  opacity: 0;
+                }
+          
+                .btn-menu-line3 {
+                  transform: rotate(-45deg) translate(4px, -4px) scale(1.15) rotate(-92deg);
+                }
+              }
+            }
+          }
+    }
 }
+
+
+
+
+
+
+// .nav-link{
+//     color:  #333;
+//     font-family: TT Hoves;
+//     font-size: 12px;
+//     font-style: normal;
+//     font-weight: 400;
+//     line-height: 100%; 
+//     letter-spacing: 2.4px;
+//     text-transform: uppercase;
+//     position: relative;
+//     width: 100%;
+
+//         &:hover{
+//             transition: .75s ease; 
+//         }
+//         &:after{
+//             content: "";
+//             position: absolute;
+//             top: -3px;
+//             left: 0; 
+//             width: 0;
+//             height: 1px;
+//             background:#333;
+//         }
+//         &:hover::after{
+//             transition: ease-in-out .75s;
+//             width: 100%;
+//             height: 1px;
+//             transform: scale(1.3); 
+//         }
+//         &:before{
+//                 content: "";
+//                 position: absolute;
+//                 bottom: -3px;
+//                 left: 0;
+//                 width: 0;
+//                 height: 1px;
+//             }
+//         &:hover::before{
+//             transition: ease-in-out .75s;
+//             width: 100%;
+//             height: 1px;
+//             transform: scale(1.3);
+//             background: #333;
+//         }
+// }
